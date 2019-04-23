@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <vector>
+#include <string>
+#include <cctype>
+class Player{
+	//attribute
+	std::string name;
+	int health{0};
+	int xp{20};
+	//methods
+	void talk(std::string);
+	bool is_dead();
+};
+class Account{
+	//attributes
+	std::string name{"Player"};
+	double balance;
+	
+	//methods
+	bool deposit(double);
+	bool withdraw(double);
+	
+};
+int main()
+{
+	Account Zahid_Account;
+	Account Farnk_Account;
+	Player Zahid;
+	Player Hero;
+	Player *enemy{nullptr};
+	enemy = new Player;
+	delete enemy;
+	Player players[]{Zahid,Hero};
+	std::vector <Player> player_vectors {Zahid}; // THIS WONT EXPAND IN DEBUGGER
+	player_vectors.push_back(Hero);
+	return 0;
+}
